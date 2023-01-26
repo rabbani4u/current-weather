@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --section-overlay: rgba(0, 0, 0, 0.7);
+  --background-overlay: rgba(0, 0, 0, 0.5);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-overlay);
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.section {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: #fff;
+}
+.section,
+.section__temperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-overlay);
+}
+.section__inputs > input {
+  border: 0.8px solid white;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.6rem;
+  font-weight: 200;
+}
+.section__inputs > button {
+  border: none;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  background-color: #fff;
+  padding: 0.6rem;
+  font-weight: 500;
+  font-size: 20px;
+}
+.section__inputs > button:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon > h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+.temperature > h1 {
+  font-size: 60px;
 }
